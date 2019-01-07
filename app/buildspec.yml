@@ -9,6 +9,7 @@ phases:
     commands:
       - cd app
       - docker build --tag "$IMAGE_URI" .
+      - cd ..
   post_build:
     commands:
       - docker push "$IMAGE_URI"
