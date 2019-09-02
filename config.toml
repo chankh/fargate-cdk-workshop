@@ -1,0 +1,45 @@
+languageCode = "en-us"
+ignoreFiles = [ "\\.files/README.md$",  ]
+defaultContentLanguage = "en"
+title = "AWS Fargate Workshop"
+theme = "learn"
+uglyurls = false
+sectionPagesMenu = "main"
+relativeURLs = true
+
+[blackfriday]
+hrefTargetBlank = true
+
+[params]
+editURL = "https://github.com/chankh/fargate-cicd-workshop/edit/master/content/"
+themeVariant = "mine"
+showVisitedLinks = false
+author = "Kwunhok Chan"
+description = "AWS Fargate Workshop"
+disableSearch = false
+disableAssetsBusting = false
+disableLanguageSwitchingButton = true
+disableShortcutsTitle=false
+disableInlineCopyToClipBoard = true
+ghrepo = "https://github.com/chankh/fargate-cicd-workshop/"
+branch = "master"
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bookmark'></i> More Resources"
+url = "/more_resources"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-github'></i> GitHub Project"
+url = "https://github.com/chankh/fargate-cicd-workshop"
+weight = 30
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-twitter'></i> @kwunhok"
+url = "https://twitter.com/intent/user?screen_name=kwunhok"
+weight = 40
+
+
+[outputs]
+home = [ "HTML", "AMP", "JSON"]
+page = [ "HTML", "AMP"]
