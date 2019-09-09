@@ -1,10 +1,13 @@
 languageCode = "en-us"
 ignoreFiles = [ "\\.files/README.md$",  ]
 defaultContentLanguage = "en"
+googleAnalytics = "UA-147232206-1"
 title = "AWS Fargate Workshop"
 theme = "learn"
 uglyurls = false
 sectionPagesMenu = "main"
+pygmentsCodeFences = true
+pygmentsStyle = "monokai"
 relativeURLs = true
 
 [blackfriday]

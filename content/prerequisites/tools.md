@@ -35,8 +35,9 @@ Your output should resemble:
 sudo yum -y install jq
 ```
 
-#### Configure the AWS region
+#### Configure the AWS account ID and region
 ```
+export ACCOUNT_ID=$(aws sts get-caller-identity --output text --query 'Account')
 export AWS_REGION=$(curl -s 169.254.169.254/latest/dynamic/instance-identity/document | jq -r .region)
 aws configure set default.region $AWS_REGION
 ```
