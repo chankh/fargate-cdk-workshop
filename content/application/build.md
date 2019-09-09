@@ -27,7 +27,7 @@ This build step takes about 10 minutes to complete.
 {{% /notice %}}
 
 ```
-curl -O https://raw.githubusercontent.com/chankh/fargate-cicd-workshop/master/static/assets/Dockerfile
+curl -O https://raw.githubusercontent.com/chankh/fargate-cdk-workshop/master/static/assets/Dockerfile
 docker build --tag spring-petclinic:$TAG .
 ```
 
