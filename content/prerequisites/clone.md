@@ -2,6 +2,7 @@
 title: "Clone the Workshop Repo"
 chapter: false
 weight: 23
+hidden: true
 ---
 
 ```

@@ -1,11 +1,10 @@
 ---
 title: "Deploy"
-date: 2018-08-07T12:37:34-07:00
 weight: 13
 ---
 
-Now that we have built and pushed our application Docker image to ECR, we are
-going to use the `fargate` command to deploy the application to AWS Fargate.
+Now that we have successfully built our first container, we are going to use the
+`fargate` command to deploy the application to AWS Fargate.
 
 First we are going to create a load-balancer.
 ```

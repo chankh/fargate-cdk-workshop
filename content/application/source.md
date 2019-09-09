@@ -1,6 +1,5 @@
 ---
 title: "Source"
-date: 2018-08-07T12:37:34-07:00
 weight: 10
 ---
 

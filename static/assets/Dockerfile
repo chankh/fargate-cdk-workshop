@@ -9,6 +9,7 @@ RUN mvn package -DskipTests
 FROM openjdk:8-jre-alpine
 WORKDIR /app
 COPY --from=build /build/target/*.jar /app
+EXPOSE 8080
 #simple hack to avoid using the full filename as parameter
 RUN echo "java -jar /app/*.jar" > /app/docker-entrypoint.sh
 ENTRYPOINT ["sh", "/app/docker-entrypoint.sh"]

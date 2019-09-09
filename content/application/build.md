@@ -1,6 +1,5 @@
 ---
 title: "Build"
-date: 2018-08-07T12:37:34-07:00
 weight: 11
 ---
 
@@ -23,8 +22,12 @@ export TAG=$(date +%Y-%m-%d.%H.%M.%S).$(git rev-parse HEAD | head -c 8)
 To build the docker image, we need to define a `Dockerfile`. We have prepared 
 one for you, copy this to the project directory and start building.
 
+{{% notice note %}}
+This build step takes about 10 minutes to complete.
+{{% /notice %}}
+
 ```
-cp ~/environment/fargate-cicd-workshop/static/assets/Dockerfile .
+curl -O https://raw.githubusercontent.com/chankh/fargate-cicd-workshop/master/static/assets/Dockerfile
 docker build --tag spring-petclinic:$TAG .
 ```
 
@@ -33,7 +36,7 @@ docker build --tag spring-petclinic:$TAG .
 Test run your docker image locally.
 
 ```
-docker run -it spring-petclinic:$TAG
+docker run -it -p 8080:8080 spring-petclinic:$TAG
 ```
 
 Once it is started, you can preview the application using **Preview** > 
