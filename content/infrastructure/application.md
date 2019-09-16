@@ -55,7 +55,7 @@ export class CdkWorkshopStack extends cdk.Stack {
     });
 
     // Create a load-balanced Fargate service and make it public
-    new ecs_patterns.LoadBalancedFargateService(this, "spring-petclinic", {
+    new ecs_patterns.ApplicationLoadBalancedFargateService(this, "spring-petclinic", {
       cluster: cluster, // Required
       containerPort: 8080, // Port number on the container, default is 80
       cpu: 512, // Default is 256
