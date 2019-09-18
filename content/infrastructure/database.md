@@ -63,7 +63,7 @@ import ec2 = require('@aws-cdk/aws-ec2');
 import ecs = require('@aws-cdk/aws-ecs');
 import ecs_patterns = require('@aws-cdk/aws-ecs-patterns');
 import asm = require('@aws-cdk/aws-secretsmanager');
-import rds = require('@aws-cdk/rds');
+import rds = require('@aws-cdk/aws-rds');
 
 export class CdkWorkshopStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
