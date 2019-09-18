@@ -1,6 +1,6 @@
 ---
 title: "Cleanup"
-weight: 60
+weight: 90
 ---
 
 If you want to keep your application running, you can do so, but this is the end
