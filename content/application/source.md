@@ -5,7 +5,19 @@ weight: 10
 
 The sample Spring application that we will use in this workshop is the [Spring 
 PetClinic](https://github.com/spring-projects/spring-petclinic) sample
-application. PetClinic is a Spring Boot application built using Maven. Cloud9
+application. 
+
+Download the application source code from GitHub.
+
+```
+cd ~/environment
+git clone https://github.com/spring-projects/spring-petclinic.git
+cd spring-petclinic
+```
+
+#### Optional: Build and run locally on Cloud9
+
+PetClinic is a Spring Boot application built using Maven. Cloud9
 comes with OpenJDK version 1.7 install, we will need to install version 1.8 in
 order to build and run PetClinic.
 ```
@@ -22,13 +34,9 @@ Now do the same for `javac` command
 sudo alternatives --config javac
 ```
 
-Now you can download the source code, build a jar file and run it from the
-command line:
+Now you can build the application using Maven and run the jar file:
 
 ```
-cd ~/environment
-git clone https://github.com/spring-projects/spring-petclinic.git
-cd spring-petclinic
 ./mvnw package
 java -jar target/*.jar
 ```
