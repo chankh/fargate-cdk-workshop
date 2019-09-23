@@ -57,7 +57,7 @@ npm install @aws-cdk/aws-rds
 Let's go back to our `lib/cdk-workshop-stack.ts` and update the code to add new
 import and resources.
 
-{{<highlight ts "hl_lines=5-6 21-36 52-58">}}
+{{<highlight ts "hl_lines=5-6 21-47 52-58">}}
 import cdk = require('@aws-cdk/core');
 import ec2 = require('@aws-cdk/aws-ec2');
 import ecs = require('@aws-cdk/aws-ecs');
@@ -80,7 +80,9 @@ export class CdkWorkshopStack extends cdk.Stack {
 
     // Let's first generate a password for the database
     const dbSecretId = "petclinicDbPassword";
-    const dbSecret = new asm.Secret(this, dbSecretId);
+    const dbSecret = new asm.Secret(this, dbSecretId, {
+      generateSecretString: {excludePunctuation: true, includeSpace: false}
+    });
     
     const db = new rds.DatabaseInstance(this, "PetClinicDb", {
       engine: rds.DatabaseInstanceEngine.MYSQL,
@@ -92,6 +94,7 @@ export class CdkWorkshopStack extends cdk.Stack {
         ),
       vpc: vpc,
       databaseName: "petclinic",
+      deletionProtection: false, // Default is true, for this workshop we will turn it off
       multiAz: false // Default is true, for this workshop we will not use multiAZ
     });
 
