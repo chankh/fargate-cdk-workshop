@@ -6,6 +6,22 @@ weight: 13
 Now that we have successfully built our first container, we are going to use the
 `fargate` command to deploy the application to AWS Fargate.
 
+#### Download and install the latest Fargate CLI release
+```
+export PATH=$PATH:$HOME/go/bin
+go get -u github.com/jpignata/fargate
+```
+
+#### Verify the binary
+```
+fargate --version
+```
+
+Your output should resemble:
+![verify](/images/application/fargate_cli_verify.png)
+
+#### Deploy to AWS Fargate
+
 First we are going to create a load-balancer.
 ```
 fargate lb create web --port 80

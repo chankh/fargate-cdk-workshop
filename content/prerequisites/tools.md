@@ -16,20 +16,6 @@ binaries. If you are running macOS / Windows, please [see the official docs
 for the download links.](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html)
 {{% /notice %}}
 
-#### Download and install the latest Fargate CLI release
-```
-export PATH=$PATH:$HOME/go/bin
-go get -u github.com/jpignata/fargate
-```
-
-#### Verify the binary
-```
-fargate --version
-```
-
-Your output should resemble:
-![verify](/images/prerequisites/fargate_cli_verify.png)
-
 #### Install CLI utilities
 ```
 sudo yum -y install jq
